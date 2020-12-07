@@ -1,0 +1,482 @@
+body{
+  background-color: #131c25;
+  overflow-x: hidden;
+}
+
+#root{
+  overflow-x: hidden;
+  background-color: #131c25;
+  color:#d9efff;
+}
+#root.light{
+  background-color: #ffffff;
+  color:#1e335a;
+}
+#menu{
+  z-index: 5;
+  position: fixed;
+  background-color: #0f151c;
+  min-height: 7%;
+  width: 100%;
+  top: 0px;
+}
+#menu.light{
+  background-color: #ededed;
+}
+#btn-container{
+  min-width: 70%;
+  max-width: 90%;
+  padding: 10px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+}
+
+.btn{
+  min-width: 20%;
+  overflow: hidden;
+  background-color: #131a24;
+  color: #8ea7d1;
+  outline: none;
+  border-width: 0px;
+  border-color: #8ea7d1;
+  border-radius: 25px;
+  padding: 10px;
+  margin: auto;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: 'Roboto';
+}
+.btn.selected{
+  background-color: #68778f;
+  color: #131a24;
+}
+.btn.light{
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+.btn.light.selected{
+  background-color: #585858;
+  color: white;
+}
+.btn:hover{
+  animation: buttonhover 0.5s both ease-in;
+  color: #131a24;
+  box-shadow: 5px 5px 5x black;
+}
+
+.btn.light:hover{
+  animation: buttonhoverlight 0.5s both ease-in;
+  color: white;
+  box-shadow: 5px 5px 5x black;
+}
+@keyframes buttonhover {
+  from {background-color: #131a24;}
+  to {background-color: #68778f;}
+}
+@keyframes buttonhoverlight {
+  from {background-color: white;}
+  to {background-color: #585858;}
+}
+#canvas{
+  position: relative;
+  overflow: hidden;
+}
+#content{
+  text-align: center;
+}
+
+#link{
+  color:#9db2be;
+  font-size: small;
+}
+#link.light{
+  color:black;
+  font-size: small;
+}
+#threejs{
+  color:#9db2be;
+  font-size: small;
+}
+#threejs.light{
+  color:black;
+  font-size: small;
+}
+
+.fadeforever{
+  animation: fadeforever 60s both;
+}
+
+@keyframes fadeforever{
+  from{
+    opacity: 1;
+  }to{
+    opacity: 0;
+  }
+}
+#intro-container{
+  width: 100%;
+  position: absolute;
+
+}
+#intro{
+  margin: auto;
+  width: max-content;
+  max-width: 95%;
+  text-align: center;
+  font-family: 'Roboto';
+  opacity : 0.9;
+}
+#social{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  background-color: #3c6591;
+  opacity: 0.4;
+  border-radius: 12px;
+  overflow: hidden;
+  justify-content: space-evenly;
+}
+
+#social.light{
+  background-color: #636363;
+}
+
+#social:hover{
+  animation: opacity-grow 0.2s both;
+}
+
+@keyframes opacity-grow{
+  from{opacity: 0.4;}
+  to{opacity: 0.9;}
+}
+.social-icon{
+  min-width: 30px;
+  min-height: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.social-icon:hover{
+  animation: icon-grow 0.2s both ;
+}
+
+@keyframes icon-grow{
+  from{
+    min-width: 30px;
+    min-height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  to{
+    min-width: 40px;
+    min-height: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+
+
+
+
+/* Projects */
+
+#project-bar{
+  animation: fade-in 0.2s both ease-in;
+  margin: auto;
+  opacity: 0.8;
+  background-color: #242f3f;
+  width: 80%;
+  height: 100%;
+  border-radius: 12px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 1rem;
+}
+
+#project-bar.light{
+  background-color: #ededed;
+}
+
+#project-close{
+  position: absolute;
+
+  border-radius: 50%;
+  border-width: 0px;
+  outline: none;
+}
+
+.card-image{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 12px;
+  min-height: 80%;
+  width: 100%;
+}
+.card{
+  margin: auto;
+  width: 175px;
+  min-width: 160px;
+
+  min-height: 90px;
+  height: 112.5px;
+  padding: 10px;
+  background-color: #1e2733;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card.light{
+  background-color: #ffffff;
+}
+.card:hover{
+  opacity: 0.5;
+}
+.project-link{
+  color: #d9efff;
+  font-style: 'Roboto';
+  text-decoration: none;
+}
+.project-link.light{
+  color: black;
+}
+.hero{
+  height: 90px;
+  width: 160;
+  margin: auto;
+}
+
+
+.card-image.art{
+  transition: 0.2s;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0px;
+  margin: auto;
+  min-height: 40vw;
+  box-shadow: 0px 0px 30px #b8b8b8;
+}
+
+.card.art:hover{
+  opacity: 1;
+}
+#artwork-bar{
+  animation: fade-in 0.2s both ease-in;
+  margin: auto;
+  opacity: 1;
+  background-color: #2d3d55;
+  width: 97%;
+  height: 100%;
+  border-radius: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+#artwork-bar.light{
+  background-color: #ededed;
+}
+#book-footer{
+  font-size: larger;
+  padding-top: 10px;
+  font-family: 'Amatic SC';
+  color: rgb(97, 97, 97);
+}
+.page-move{
+
+  min-height: 32px;
+  min-width: 32px;
+  margin: auto;
+  margin-left: 3px;
+  margin-right: 3px;
+  border-radius: 50%;
+  border-width: 0px;
+  outline: none;
+  background-size: 33px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px #131c25; 
+  background-color: #131c25;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2a3c4f; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #405b78; 
+}
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* The switch - the box around the slider */
+
+#switch-container{
+  position: absolute;
+  bottom: 0px;
+  padding: 10px;
+  margin: auto;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+
+  
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #425063;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-image: url('images/sun.png');
+  background-position: center;
+  background-size: 20px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: #ccc;
+}
+input:checked + .slider:before {
+  border-width: 0px;
+  background-image: url('images/moon.png');
+  background-size: 20px;
+  background-position: center;
+}
+
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.slider{
+  border-radius: 34px;
+}
+
+.slider:before {
+  border-radius: 34px;
+}
+
+/*typrwriter*/
+.typewriter h1 {
+  font-weight: bolder;
+  font-size: 5vmin;
+  opacity: 0.9;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #3c6591; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+.typewriter h3 {
+  font-weight: lighter;
+  font-size: 3vmin;
+  animation: fade-in 0.5s both ease-in;
+  animation-delay: 3.5s;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #3c6591; }
+}
+
+@keyframes fade-in{
+  from {opacity: 0;}
+  to {opacity: 1;}
+}

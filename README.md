@@ -2,9 +2,6 @@
 This React based web project features a humanoid face that follows cursor movements/gyroscopic movements. Threejs was used to dynamically alter the 3D GLTF subject in response to user interaction through mesh deforming.
 
 
-![Demo](https://github.com/tejusrevi/interactive-human-face/blob/Only-the-head/src/images/ezgif.com-video-to-gif.gif)
-
-
 ## Available Scripts
 
 In the project directory, you can run:

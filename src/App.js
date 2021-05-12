@@ -1,5 +1,7 @@
 import React,{useState} from 'react';
+// eslint-disable-next-line
 import ReactDOM from 'react-dom'
+// eslint-disable-next-line
 import logo from './logo.svg';
 import './App.css';
 import Head from './components/Head'
@@ -34,13 +36,13 @@ function App() {
     if(mode === 2) document.body.style.backgroundColor = "#131c25"
     else if(mode === 1) document.body.style.backgroundColor = "#ffffff"
   }
-
+// eslint-disable-next-line
   function handleReset(ev){
     
-    if(mode === 1){
+    if (mode === 1){
       console.log("resetting"+mode)
       document.getElementById("social").style.backgroundImage = 'linear-gradient(90deg, #3c6591, #3c6591)';
-    }else if (mode === 2){
+    } else if (mode === 2){
       console.log("resetting"+mode)
       document.getElementById("social").style.backgroundImage = 'linear-gradient(90deg, #636363, #636363)';
     }
